@@ -3,12 +3,12 @@ console.log('Sample JavaScript #2 HW #14');
 const userObj = {
     firstName: 'firstName',
     lastName: 'lastName',
-    age: 31
+    age: 31,
 }
 
-function fullName(user) {
-    return user.firstName + ' ' + user.lastName;
-}
+userObj.fullName = function () {
+    return this.firstName + ' ' + this.lastName;
+};
 
 function defUpperStr(str) {
     str = str || 'DEFAULT TEXT';
